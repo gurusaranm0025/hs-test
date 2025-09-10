@@ -1,0 +1,13 @@
+[Unit]
+Description=Run Arch Linux Update every 3 days after 2 AM
+
+[Timer]
+OnCalendar=*-*-* 02:00:00
+OnUnitActiveSec=3d
+Persistent=true
+RandomizedDelaySec=1h
+Unit=arch-update.service
+
+[Install]
+WantedBy=timers.target
+
